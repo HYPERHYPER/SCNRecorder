@@ -26,6 +26,7 @@
 import Foundation
 import ARKit
 
+@available(iOS 13.0, *)
 public final class CleanRecorder<T: CleanRecordable>: BaseRecorder,
   Renderable, SCNSceneRendererDelegate {
 

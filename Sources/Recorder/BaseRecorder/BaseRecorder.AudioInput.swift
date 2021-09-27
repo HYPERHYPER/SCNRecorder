@@ -27,6 +27,7 @@ import Foundation
 import AVFoundation
 import ARKit
 
+@available(iOS 13.0, *)
 extension BaseRecorder {
 
   final class AudioInput: NSObject, MediaSession.Input.SampleBufferAudio {
@@ -63,6 +64,7 @@ extension BaseRecorder {
   }
 }
 
+@available(iOS 13.0, *)
 extension BaseRecorder.AudioInput: AVCaptureAudioDataOutputSampleBufferDelegate {
 
   @objc func captureOutput(
@@ -75,6 +77,7 @@ extension BaseRecorder.AudioInput: AVCaptureAudioDataOutputSampleBufferDelegate 
   }
 }
 
+@available(iOS 13.0, *)
 extension BaseRecorder.AudioInput: ARSessionObserver {
 
   func session(

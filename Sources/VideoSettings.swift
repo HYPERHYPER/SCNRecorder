@@ -26,6 +26,7 @@
 import Foundation
 import AVFoundation
 
+@available(iOS 13.0, *)
 public struct VideoSettings {
 
   /// The type of the output video file.
@@ -57,6 +58,7 @@ public struct VideoSettings {
   }
 }
 
+@available(iOS 13.0, *)
 extension VideoSettings {
 
   var outputSettings: [String: Any] {

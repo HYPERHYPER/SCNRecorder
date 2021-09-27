@@ -26,6 +26,7 @@
 import Foundation
 import AVFoundation
 
+@available(iOS 13.0, *)
 public extension VideoSettings {
 
   enum ScalingMode {
@@ -48,6 +49,7 @@ public extension VideoSettings {
   }
 }
 
+@available(iOS 13.0, *)
 extension VideoSettings.ScalingMode {
 
   var avScalingMode: String {

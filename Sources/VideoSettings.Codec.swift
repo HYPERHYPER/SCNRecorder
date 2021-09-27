@@ -26,6 +26,7 @@
 import Foundation
 import AVFoundation
 
+@available(iOS 13.0, *)
 public extension VideoSettings {
 
   enum Codec {
@@ -73,7 +74,6 @@ public extension VideoSettings {
       ))
     }
 
-    @available(iOS 13.0, *)
     case hevcWithAlpha(_ compressionProperties: HEVCCompressionProperties)
 
     public static func h264(
@@ -136,6 +136,7 @@ public extension VideoSettings {
   }
 }
 
+@available(iOS 13.0, *)
 public extension VideoSettings.Codec {
 
   var avCodec: AVVideoCodecType {

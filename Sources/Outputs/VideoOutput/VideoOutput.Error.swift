@@ -25,6 +25,7 @@
 
 import Foundation
 
+@available(iOS 13.0, *)
 extension VideoOutput {
 
   enum Error: Swift.Error {

@@ -27,6 +27,7 @@ import Foundation
 import SceneKit
 import ARKit
 
+@available(iOS 13.0, *)
 public final class SceneRecorder: BaseRecorder, Renderable, SCNSceneRendererDelegate {
 
   let videoInput: VideoInput

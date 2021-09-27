@@ -36,6 +36,7 @@ public enum SelfRecordableError: Swift.Error {
   case videoRecordingAlreadyStarted
 }
 
+@available(iOS 13.0, *)
 public protocol SelfRecordable: AnyObject {
 
   typealias Recorder = (BaseRecorder & Renderable)
@@ -49,6 +50,7 @@ public protocol SelfRecordable: AnyObject {
   func injectRecorder()
 }
 
+@available(iOS 13.0, *)
 public extension SelfRecordable {
 
   private var videoRecordingStorage: AssociatedStorage<VideoRecording> {
@@ -61,6 +63,7 @@ public extension SelfRecordable {
   }
 }
 
+@available(iOS 13.0, *)
 extension SelfRecordable {
 
   func assertedRecorder(
@@ -77,6 +80,7 @@ extension SelfRecordable {
   }
 }
 
+@available(iOS 13.0, *)
 public extension SelfRecordable {
 
   func prepareForRecording() {
@@ -118,6 +122,7 @@ public extension SelfRecordable {
   }
 }
 
+@available(iOS 13.0, *)
 public extension SelfRecordable where Self: MetalRecordable {
 
   func prepareForRecording() {
@@ -131,6 +136,8 @@ public extension SelfRecordable where Self: MetalRecordable {
   }
 }
 
+
+@available(iOS 13.0, *)
 public extension SelfRecordable {
 
   @discardableResult

@@ -26,6 +26,7 @@
 import Foundation
 import AVFoundation
 
+@available(iOS 13.0, *)
 public extension VideoRecording {
 
   struct Info {

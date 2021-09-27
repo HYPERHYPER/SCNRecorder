@@ -27,6 +27,7 @@ import Foundation
 import SceneKit
 import ARKit
 
+@available(iOS 13.0, *)
 public class BaseRecorder: NSObject {
 
   let mediaSession: MediaSession
@@ -96,6 +97,7 @@ public class BaseRecorder: NSObject {
 }
 
 // MARK: - ARSessionDelegate
+@available(iOS 13.0, *)
 extension BaseRecorder: ARSessionDelegate {
 
   @objc public func session(

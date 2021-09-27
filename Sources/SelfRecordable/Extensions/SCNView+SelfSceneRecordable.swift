@@ -26,6 +26,7 @@
 import Foundation
 import SceneKit
 
+@available(iOS 13.0, *)
 extension SCNView: SelfSceneRecordable {
 
   public func prepareForRecording() {

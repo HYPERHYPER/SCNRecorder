@@ -27,6 +27,7 @@ import Foundation
 import AVFoundation
 import SceneKit
 
+@available(iOS 13.0, *)
 extension CleanRecorder {
 
   final class VideoInput<T: CleanRecordable>: MediaSession.Input.PixelBufferVideo, TimeScalable {

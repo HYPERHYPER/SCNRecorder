@@ -26,6 +26,7 @@
 import Foundation
 import AVFoundation
 
+@available(iOS 13.0, *)
 final class VideoOutput {
 
   var assetWriter: AVAssetWriter!
@@ -119,6 +120,7 @@ final class VideoOutput {
   }
 }
 
+@available(iOS 13.0, *)
 extension VideoOutput {
 
   func startSession(at sourceTime: CMTime) {
@@ -183,6 +185,7 @@ extension VideoOutput {
 }
 
 // - MARK: Getters
+@available(iOS 13.0, *)
 extension VideoOutput {
 
   var url: URL { assetWriter.outputURL }
@@ -191,6 +194,7 @@ extension VideoOutput {
 }
 
 // - MARK: Lifecycle
+@available(iOS 13.0, *)
 extension VideoOutput {
 
   func resume() {
@@ -211,6 +215,7 @@ extension VideoOutput {
 }
 
 // - MARK: Unsafe Lifecycle
+@available(iOS 13.0, *)
 private extension VideoOutput {
 
   func unsafeResume() { state = state.resume(self) }
@@ -225,6 +230,7 @@ private extension VideoOutput {
 }
 
 // - MARK: VideoOutput
+@available(iOS 13.0, *)
 extension VideoOutput: MediaSession.Output.Video {
 
   func appendVideoSampleBuffer(_ sampleBuffer: CMSampleBuffer) {
@@ -237,6 +243,7 @@ extension VideoOutput: MediaSession.Output.Video {
 }
 
 // - MARK: AudioOutput
+@available(iOS 13.0, *)
 extension VideoOutput: MediaSession.Output.Audio {
 
   func appendAudioSampleBuffer(_ sampleBuffer: CMSampleBuffer) {

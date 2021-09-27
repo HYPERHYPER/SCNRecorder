@@ -33,6 +33,7 @@ public protocol CleanRecordable: AnyObject {
   var cleanPixelBuffer: CVPixelBuffer? { get }
 }
 
+@available(iOS 13.0, *)
 public extension CleanRecordable {
 
   internal var cleanStorage: AssociatedStorage<Clean<Self>> {
@@ -53,6 +54,7 @@ public extension CleanRecordable {
   var clean: SelfRecordable { _clean }
 }
 
+@available(iOS 13.0, *)
 final class Clean<T: CleanRecordable>: SelfRecordable {
 
   public var recorder: (BaseRecorder & Renderable)? { cleanRecorder }

@@ -26,6 +26,7 @@
 import Foundation
 import AVFoundation
 
+@available(iOS 13.0, *)
 extension VideoOutput {
 
   typealias State = VideoOutputState
@@ -34,6 +35,8 @@ extension VideoOutput {
 /// Finite-State Machine
 ///
 /// Associated values are ignored in equation.
+///
+@available(iOS 13.0, *)
 public enum VideoOutputState: Equatable {
 
   public static func == (lhs: VideoOutputState, rhs: VideoOutputState) -> Bool {
@@ -210,6 +213,7 @@ public enum VideoOutputState: Equatable {
   }
 }
 
+@available(iOS 13.0, *)
 private extension VideoOutputState {
 
   func _appendVideoSampleBuffer(

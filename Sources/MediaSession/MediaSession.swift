@@ -122,6 +122,7 @@ extension MediaSession {
   }
 }
 
+@available(iOS 13.0, *)
 extension MediaSession {
 
   func capturePixelBuffers(

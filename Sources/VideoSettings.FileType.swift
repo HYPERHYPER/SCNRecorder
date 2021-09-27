@@ -26,6 +26,7 @@
 import Foundation
 import AVFoundation
 
+@available(iOS 13.0, *)
 public extension VideoSettings {
 
   enum FileType: CaseIterable {
@@ -60,6 +61,7 @@ public extension VideoSettings {
   }
 }
 
+@available(iOS 13.0, *)
 extension VideoSettings.FileType {
 
   var avFileType: AVFileType {

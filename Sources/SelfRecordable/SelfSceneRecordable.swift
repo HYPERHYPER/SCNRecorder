@@ -29,16 +29,19 @@ import SceneKit
 
 private var sceneRecorderKey: UInt8 = 0
 
+@available(iOS 13.0, *)
 public protocol SelfSceneRecordable: SelfRecordable {
 
   var sceneRecorder: SceneRecorder? { get set }
 }
 
+@available(iOS 13.0, *)
 extension SelfSceneRecordable {
 
   public var recorder: (BaseRecorder & Renderable)? { sceneRecorder }
 }
 
+@available(iOS 13.0, *)
 extension SelfSceneRecordable {
 
   var sceneRecorderStorage: AssociatedStorage<SceneRecorder> {
@@ -51,6 +54,7 @@ extension SelfSceneRecordable {
   }
 }
 
+@available(iOS 13.0, *)
 extension SelfSceneRecordable where Self: MetalRecordable {
 
   public func injectRecorder() {

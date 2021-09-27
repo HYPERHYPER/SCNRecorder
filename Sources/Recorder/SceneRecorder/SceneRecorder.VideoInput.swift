@@ -27,6 +27,7 @@ import Foundation
 import AVFoundation
 import SceneKit
 
+@available(iOS 13.0, *)
 extension SceneRecorder {
 
   final class VideoInput: MediaSession.Input.PixelBufferVideo, TimeScalable {
